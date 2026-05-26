@@ -22,12 +22,6 @@ app.add_middleware(
 S3_BUCKET = 'user-federico-ueia-so'
 s3 = boto3.client('s3', region_name='us-east-2')
 
-# Configuración RDS
-
-DB_HOST = "localhost"
-DB_USER = os.getenv('DB_USER')
-DB_PASSWORD = os.getenv('DB_PASSWORD')
-DB_NAME = os.getenv('DB_NAME')
 
 def get_db():
     return pymysql.connect(
