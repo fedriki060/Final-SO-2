@@ -24,17 +24,17 @@ s3 = boto3.client('s3', region_name='us-east-2')
 
 # Configuración RDS
 
-DB_HOST = os.getenv('DB_HOST')
+DB_HOST = "localhost"
 DB_USER = os.getenv('DB_USER')
 DB_PASSWORD = os.getenv('DB_PASSWORD')
 DB_NAME = os.getenv('DB_NAME')
 
 def get_db():
     return pymysql.connect(
-        host=DB_HOST,
-        user=DB_USER,
-        password=DB_PASSWORD,
-        database=DB_NAME,
+         host="localhost",
+        user="ubuntu",
+        password="Federico06.",
+        database="db",
         cursorclass=pymysql.cursors.DictCursor
     )
 
